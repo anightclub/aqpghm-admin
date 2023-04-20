@@ -1,38 +1,287 @@
-.App {
+/* header style  */
+.wltophm{
+  height: 20px;
+  background-color: wheat;
+  width: 100%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mltophm{
+  height: 80px;
+  background-color: brown;
+  color: aliceblue;
+  padding-left: 60px;
+  font-size: 45px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* sidebar */
+.sb {
+  width: 260px;
+  position: sticky;
+  border-top: 1.5px solid wheat;
+  border-right: 1.5px solid wheat;
+  background-color: brown;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* sidebar Button */
+.sbbhm{
+  cursor: pointer;
+  display: block;
+  border-color: wheat;
+  border-left: none;
+  border-right: 2px solid wheat;
+  border-top: none;
+  color: wheat;
+  text-align: left;
+  font-weight: bold;
+  width: 100%;
+  font-size: large;
+  background-color: transparent;
+  border-bottom: 2px solid wheat;
+  padding: 5px 14px;
+}
+.sbblhm{
+  color: inherit;
+  text-decoration: none;
+}
+/* home page */
+.mphm{
+  width: 100%;
+  display: flex;
+}
+.mpdbparenthm {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 30px;
+  color: brown;
+}
+.mpdbboxesparenthm{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.mpdbboxeshm {
+  border: 6px solid brown;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  width: 350px;
+  height: 210px;
+  padding: 10px 30px;
+}
+.mpdbboxeshm p {
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 22px;
+  text-align: justify;
+}
+.mpdbboxeshm:hover {
+  /* color: white; */
+  background-color: aquamarine;
+  cursor: pointer;
+}
+.mpdbheadinghm {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+/* User Creation */
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+}
+.ppidchm{
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  padding: 20px;
+}
+.ppidchm div{
+  margin: 30px;
+}
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form input, .form select {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #0077cc;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.form button:hover {
+  background-color: #005daa;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* addClass */
+.add-btn {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #00b1af;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.add-btn:hover {
+  background-color: #f84fed;
+}
+
+.add-class {
+  flex: 1;
+  padding: 30px;
+  margin-bottom: 50px;
+  background-color: #fff;
+}
+
+.add-class h1 {
+  margin-bottom: 40px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.add-class ul {
+  list-style: none;
+  margin: 0;
+  padding: 18px;
+  border: black 2px solid;
+  border-radius: 5px;
+}
+
+.add-class li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgb(0, 0, 0);
+}
+
+.add-class li button {
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #f44336;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-class li button:hover {
+  background-color: #d32f2f;
+}
+
+/* popup */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  display: block;
+  margin: 10px 0 0 auto;
+  background-color: #0077ff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0066cc;
+}
+
+/* subjects */
+.subjects{
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
+}
+.subjects h1 {
+  margin-bottom: 40px;
+  font-size: 50px;
+}
+.subjects ul {
+  list-style: none;
+  margin: 0;
+  padding: 18px;
+  border: black 2px solid;
+  border-radius: 3%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subjects li {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgb(0, 0, 0);
+  cursor: pointer;
 }
